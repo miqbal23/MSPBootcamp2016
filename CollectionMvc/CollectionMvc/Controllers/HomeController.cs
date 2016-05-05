@@ -13,13 +13,7 @@ namespace CollectionMvc.Controllers
         // GET: Home
         public ActionResult Index()
         {
-            List<Participant> participants = new List<Participant>()
-            {
-                new Participant() {PersonId=1, Name="Muhamad Iqbal", Region="Bodeta" },
-                new Participant() {PersonId=2, Name="Ade Haryanto", Region="Sumatera" }
-            };
-
-            return View(participants);
+            return View();
         }
     }
 }
