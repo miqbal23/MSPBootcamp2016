@@ -12,13 +12,13 @@ namespace CollectionMvc.Controllers
         // GET: Store
         public string Index()
         {
-            // simple Controller return value to View
+            // simple Controller return value to View, access by typing /Store/Index into URL
             return "Hello from Store.Index";
         }
 
         public string SampleQuery(string category)
         {
-            // simple Web with query
+            // simple Web with query, access by typing /Store/SampleQuery?category={your input}
             return HttpUtility.HtmlEncode("Hello from SampleQuery with category: " + category);
         }
 
