@@ -3,13 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25123.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CollectionMvc", "CollectionMvc\CollectionMvc.csproj", "{16A4F30D-B1E0-4699-B7A1-30C90BB97BF7}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CollectionMvc.Tests", "CollectionMvc.Tests\CollectionMvc.Tests.csproj", "{40360662-DEAD-4034-A76A-2ED1CAA4AD65}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccessLayer", "DataAccessLayer\DataAccessLayer.csproj", "{705E1041-6153-4C01-9767-9E022E3A3592}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NorthwindRepository", "NorthwindRepository\NorthwindRepository.csproj", "{653BD5C8-E28E-409D-825F-05C499FE10D5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BootcampMvc", "BootcampMvc\BootcampMvc.csproj", "{03A70C0E-F223-470B-851A-28E772B7EE63}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BootcampMvc.Tests", "BootcampMvc.Tests\BootcampMvc.Tests.csproj", "{B100E966-7048-4C48-B979-E9BE6FF905F4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,14 +17,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{16A4F30D-B1E0-4699-B7A1-30C90BB97BF7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{16A4F30D-B1E0-4699-B7A1-30C90BB97BF7}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{16A4F30D-B1E0-4699-B7A1-30C90BB97BF7}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{16A4F30D-B1E0-4699-B7A1-30C90BB97BF7}.Release|Any CPU.Build.0 = Release|Any CPU
-		{40360662-DEAD-4034-A76A-2ED1CAA4AD65}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{40360662-DEAD-4034-A76A-2ED1CAA4AD65}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{40360662-DEAD-4034-A76A-2ED1CAA4AD65}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{40360662-DEAD-4034-A76A-2ED1CAA4AD65}.Release|Any CPU.Build.0 = Release|Any CPU
 		{705E1041-6153-4C01-9767-9E022E3A3592}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{705E1041-6153-4C01-9767-9E022E3A3592}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{705E1041-6153-4C01-9767-9E022E3A3592}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -33,6 +25,14 @@ Global
 		{653BD5C8-E28E-409D-825F-05C499FE10D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{653BD5C8-E28E-409D-825F-05C499FE10D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{653BD5C8-E28E-409D-825F-05C499FE10D5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{03A70C0E-F223-470B-851A-28E772B7EE63}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{03A70C0E-F223-470B-851A-28E772B7EE63}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{03A70C0E-F223-470B-851A-28E772B7EE63}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{03A70C0E-F223-470B-851A-28E772B7EE63}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B100E966-7048-4C48-B979-E9BE6FF905F4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B100E966-7048-4C48-B979-E9BE6FF905F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B100E966-7048-4C48-B979-E9BE6FF905F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B100E966-7048-4C48-B979-E9BE6FF905F4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -141,5 +141,21 @@ namespace CollectionMvc.Controllers
             }
             base.Dispose(disposing);
         }
+
+        public JsonResult CheckCustomerID(string CustomerID)
+        {
+            var cust = custRepo.Search(CustomerID);
+            bool isValid;
+
+            if (cust != null)
+            {
+                isValid = false;
+            }
+            else
+            {
+                isValid = true;
+            }
+            return Json(isValid,JsonRequestBehavior.AllowGet);
+        }
     }
 }

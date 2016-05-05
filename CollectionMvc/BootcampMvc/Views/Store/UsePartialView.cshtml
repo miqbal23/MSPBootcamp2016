@@ -1,0 +1,15 @@
+﻿
+@{
+    ViewBag.Title = "UsePartialView";
+}
+
+<h2>Sample of using Partial View</h2>
+
+@*if your partial view has params, string, etc*@
+@Html.Partial("_PartialView")
+
+@*if your partial view is just a simple view*@
+@*@{ 
+    Html.RenderPartial("_PartialView");
+}*@
+

@@ -1,0 +1,22 @@
+﻿@using BootcampMvc.Models
+
+@model IEnumerable<Participant>
+
+@{
+    ViewBag.Title = "Using data in View";
+}
+
+@Styles.Render("~/Content/mycss")
+
+<h2>@ViewBag.Title</h2>
+
+<h3>Using collections, with strongly-typed data</h3>
+@*accessing collection of data, in strongly-typed model*@
+<ul>
+    @foreach (var item in Model)
+    {
+        <li>@item.Name, Region @item.Region</li>
+    }
+</ul>
+
+

@@ -1,0 +1,30 @@
+﻿@using BootcampMvc.Models
+
+@model IEnumerable<Participant>
+
+@{
+    ViewBag.Title = "Using data in View";
+}
+
+<h2>@ViewBag.Title</h2>
+
+<h3>Using Viewdata</h3>
+@*accessing data with ViewData*@
+<p>Event : @ViewData["event"]</p>
+<p>Place : @ViewData["place"]</p>
+
+<h3>Using ViewBag</h3>
+@*accessing data with ViewBag*@
+<p>Event : @ViewBag.Event</p>
+<p>Place : @ViewBag.Place</p>
+
+<h3>Using collections, with strongly-typed data</h3>
+@*accessing collection of data, in strongly-typed model*@
+<ul>
+    @foreach (var item in Model)
+    {
+        <li>@item.Name, Region @item.Region</li>
+    }
+</ul>
+
+
