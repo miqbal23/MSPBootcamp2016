@@ -1,0 +1,31 @@
+﻿@model List<CollectionMvc.Models.Participant>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<table>
+    <caption>MSP Bootcamp List</caption>
+    <tr>
+        <td>Id</td>
+        <td>Name</td>
+        <td>Region</td>
+    </tr>
+    @foreach (CollectionMvc.Models.Participant item in Model)
+    {
+        <tr>
+            <td>
+                @item.PersonId
+            </td>
+            <td>
+                @item.Name
+            </td>
+            <td>
+                @item.Region
+            </td>
+        </tr>
+    }
+</table>
+

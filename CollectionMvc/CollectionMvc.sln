@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25123.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CollectionMvc", "CollectionMvc\CollectionMvc.csproj", "{16A4F30D-B1E0-4699-B7A1-30C90BB97BF7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CollectionMvc.Tests", "CollectionMvc.Tests\CollectionMvc.Tests.csproj", "{40360662-DEAD-4034-A76A-2ED1CAA4AD65}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{16A4F30D-B1E0-4699-B7A1-30C90BB97BF7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{16A4F30D-B1E0-4699-B7A1-30C90BB97BF7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{16A4F30D-B1E0-4699-B7A1-30C90BB97BF7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{16A4F30D-B1E0-4699-B7A1-30C90BB97BF7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{40360662-DEAD-4034-A76A-2ED1CAA4AD65}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{40360662-DEAD-4034-A76A-2ED1CAA4AD65}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{40360662-DEAD-4034-A76A-2ED1CAA4AD65}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{40360662-DEAD-4034-A76A-2ED1CAA4AD65}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
