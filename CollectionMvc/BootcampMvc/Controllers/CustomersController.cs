@@ -65,6 +65,7 @@ namespace BootcampMvc.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Create([Bind(Include = "CustomerID,CompanyName,ContactName,ContactTitle,Address,City,Region,PostalCode,Country,Phone,Fax")] Customer customer)
         {
+            // sample error to throw exception
             bool isError = true;
             if (isError)
             {
