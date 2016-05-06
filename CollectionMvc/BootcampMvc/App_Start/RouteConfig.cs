@@ -13,7 +13,7 @@ namespace BootcampMvc
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
-            // attribute routing
+            // activate attribute routing
             routes.MapMvcAttributeRoutes();
 
             // traditional routing
