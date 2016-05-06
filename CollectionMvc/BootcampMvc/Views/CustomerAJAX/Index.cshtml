@@ -1,0 +1,55 @@
+﻿@model IEnumerable<DataAccessLayer.Customer>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>ViewBag.Title</h2>
+
+<div>
+    @*to do search async using AJAX*@
+    @using (Ajax.BeginForm("Search", "CustomerAJAX", new AjaxOptions
+    {
+        InsertionMode = InsertionMode.Replace,
+        HttpMethod = "Get",
+        UpdateTargetId = "divresult"
+    }
+            ))
+    // InsertionMode = how result returned to the target
+    // HttpMethod  = mehtod used
+    // UpdateTargetId = target of insertion
+    {
+        <div class="form-group form-control">
+            <input type="text" name="name" />
+            <input type="submit" value="Search by AJAX" />
+        </div>
+    }
+
+</div>
+
+<div id="divresult">No result</div>
+
+<div>
+    <ul>
+        @foreach (var item in Model)
+        {
+            <li>
+                @*to show dta async with AJAX*@
+                @Ajax.ActionLink(item.CustomerID, "Search", new { name = item.CompanyName },
+           new AjaxOptions
+           {
+               InsertionMode = InsertionMode.Replace,
+               HttpMethod = "Get",
+               UpdateTargetId = "divdetails"
+           })
+            </li>
+        }
+    </ul>
+</div>
+
+<div id="divdetails">No details</div>
+
+@*to call the AJAX jQuery script listed in BundleConfig*@
+@section scripts{
+    @Scripts.Render("~/bundles/jqueryajax")
+}
