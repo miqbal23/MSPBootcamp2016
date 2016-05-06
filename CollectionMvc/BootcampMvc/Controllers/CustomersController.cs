@@ -65,15 +65,25 @@ namespace BootcampMvc.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Create([Bind(Include = "CustomerID,CompanyName,ContactName,ContactTitle,Address,City,Region,PostalCode,Country,Phone,Fax")] Customer customer)
         {
-            if (ModelState.IsValid)
+            try
             {
-                // because Add and SaveChange already implemented, we just need Insert
-                //db.Customers.Add(customer);
-                //db.SaveChanges();
-                custRepo.Insert(customer);
-                return RedirectToAction("Index");
+                if (ModelState.IsValid)
+                {
+                    // because Add and SaveChange already implemented, we just need Insert
+                    //db.Customers.Add(customer);
+                    //db.SaveChanges();
+                    custRepo.Insert(customer);
+                    return RedirectToAction("Index");
+                }
             }
+            catch (Exception ex)
+            {
+                // debugging purpose
+                // add error reporting feature here
 
+                ViewBag.ErrorMsg = ex.ToString();
+            }
+                       
             return View(customer);
         }
 

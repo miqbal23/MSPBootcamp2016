@@ -18,13 +18,13 @@ namespace DataAccessLayer
     public class CustomerMetadata
     {
         [Display(Name = "Customer ID")]
-        [Required(ErrorMessage = "This field need to be filled")]
+        [Required(ErrorMessage = "Customer ID need to be filled")]
         [StringLength(5,ErrorMessage = "Maximum 5 characters")]
         [Remote("CheckCustomerID","Customers",ErrorMessage = "Customer ID has been used")]
         public string CustomerID { get; set; }
 
         [Display(Name = "Company Name")]
-        [Required(ErrorMessage = "This field need to be filled")]
+        [Required(ErrorMessage = "Company Name need to be filled")]
         [StringLength(40, ErrorMessage = "Maximum 40 characters")]
         public string CompanyName { get; set; }
     }
