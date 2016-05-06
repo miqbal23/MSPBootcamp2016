@@ -13,6 +13,18 @@ namespace BootcampMvc
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
+            // this is how server manages the route in Web app
+            routes.MapRoute(
+                name: "Store", // route name
+                url: "MyStore/BrowseProduct/{category}", // url showed at browser
+                defaults: new
+                {
+                    controller = "Store", // Controller that will be called
+                    action = "Browse", // Action will be executed
+                    category = UrlParameter.Optional // parameter (if any)
+                }
+            );
+
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",

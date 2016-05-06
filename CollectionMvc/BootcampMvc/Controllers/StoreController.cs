@@ -17,7 +17,7 @@ namespace BootcampMvc.Controllers
             return "Hello from Store.Index";
         }
 
-        public string SampleQuery(string category)
+        public string Browse(string category)
         {
             // simple Web with query, access by typing /Store/SampleQuery?category={your input}
             return HttpUtility.HtmlEncode("Hello from SampleQuery with category: " + category);
