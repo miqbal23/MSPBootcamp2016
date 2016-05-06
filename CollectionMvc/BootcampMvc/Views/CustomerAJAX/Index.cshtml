@@ -1,13 +1,14 @@
 ﻿@model IEnumerable<DataAccessLayer.Customer>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Customer AJAX";
 }
 
 <h2>ViewBag.Title</h2>
 
 <div>
     @*to do search async using AJAX*@
+    @*BeginForm = method to do form input*@
     @using (Ajax.BeginForm("Search", "CustomerAJAX", new AjaxOptions
     {
         InsertionMode = InsertionMode.Replace,
@@ -20,7 +21,7 @@
     // UpdateTargetId = target of insertion
     {
         <div class="form-group form-control">
-            <input type="text" name="name" />
+            <input type="text" name="name" /> @*name of element must sync with Search param*@
             <input type="submit" value="Search by AJAX" />
         </div>
     }
@@ -34,14 +35,15 @@
         @foreach (var item in Model)
         {
             <li>
-                @*to show dta async with AJAX*@
+                @*to show data async with AJAX*@
+                @*ActionLink = method to run a Controller method*@
                 @Ajax.ActionLink(item.CustomerID, "Search", new { name = item.CompanyName },
-           new AjaxOptions
-           {
-               InsertionMode = InsertionMode.Replace,
-               HttpMethod = "Get",
-               UpdateTargetId = "divdetails"
-           })
+                    new AjaxOptions
+                    {
+                         InsertionMode = InsertionMode.Replace,
+                         HttpMethod = "Get",
+                         UpdateTargetId = "divdetails"
+                    })
             </li>
         }
     </ul>
@@ -51,5 +53,5 @@
 
 @*to call the AJAX jQuery script listed in BundleConfig*@
 @section scripts{
-    @Scripts.Render("~/bundles/jqueryajax")
+    @Scripts.Render("~/bundles/jqueryajax");
 }

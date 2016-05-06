@@ -251,6 +251,8 @@
     <Content Include="Views\Store\_PartialView.cshtml" />
     <Content Include="Views\Store\UsePartialView.cshtml" />
     <Content Include="Views\CustomerAJAX\Index.cshtml" />
+    <Content Include="Views\CustomerAJAX\Search.cshtml" />
+    <Content Include="Views\CustomerAJAX\_Search.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
