@@ -16,7 +16,11 @@ namespace BootcampMvc.Migrations
 
         protected override void Seed(BootcampMvc.Models.ApplicationDbContext context)
         {
-            
+            // this is where update function placed when Web updating the database
+            // run 'update-database' to create user tables in database
+            // option : 
+            //          -script  : generate SQL query script
+            //          -verbose : show details in console during process
         }
     }
 }
