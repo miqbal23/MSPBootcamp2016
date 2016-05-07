@@ -24,7 +24,14 @@
                     <li>@Html.ActionLink("Home", "Index", "Home")</li>
                     <li>@Html.ActionLink("About", "About", "Home")</li>
                     <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
-                    <li>@Html.ActionLink("Customer AJAX", "Index", "CustomerAJAX")</li>
+
+                    @*show certain links if user is authenticated and in certain role*@
+                    @if (Request.IsAuthenticated && User.IsInRole("Administrators"))
+                    {
+                        <li>@Html.ActionLink("Customer AJAX", "Index", "CustomerAJAX")</li>
+                    }
+
+                    <li>@Html.ActionLink("Customers", "Index", "Customers")</li>
                 </ul>
                 @Html.Partial("_LoginPartial")
             </div>

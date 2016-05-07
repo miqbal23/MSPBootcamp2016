@@ -13,6 +13,8 @@ using NorthwindRepository.Repositories;
 
 namespace BootcampMvc.Controllers
 {
+    // this attribute signifies controllers that require user authorization
+    [Authorize]
     public class CustomersController : Controller
     {
         // for connecting to DataAccessLayer, change db connection with this
@@ -26,6 +28,8 @@ namespace BootcampMvc.Controllers
             // all connection with db changed with custRepo
         }
 
+        // allow unauthorized users to access view
+        [AllowAnonymous]
         // GET: Customers
         public ActionResult Index()
         {
@@ -33,6 +37,7 @@ namespace BootcampMvc.Controllers
             return View(custRepo.GetAllData());
         }
 
+        [AllowAnonymous]
         // GET: Customers/Details/5
         public ActionResult Details(string id)
         {
@@ -131,6 +136,10 @@ namespace BootcampMvc.Controllers
             return View(customer);
         }
 
+        // authorize attribute to allow only certain users
+        [Authorize(Users = "admin, user1")]
+        // authorize attribute to allow only users with certain roles
+        [Authorize(Roles = "Administrator, Members")]        
         // GET: Customers/Delete/5
         public ActionResult Delete(string id)
         {
@@ -150,6 +159,8 @@ namespace BootcampMvc.Controllers
             return View(customer);
         }
 
+        // authorize attribute with combined parameters
+        [Authorize(Roles = "Administrators", Users = " admin")]
         // POST: Customers/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
