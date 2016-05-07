@@ -68,6 +68,7 @@ namespace BootcampMvc.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        // [Bind(Include)] is used to whitelist field available for data input. Other than whitelisted will be ignored. Good example to avoid overposting attack
         public ActionResult Create([Bind(Include = "CustomerID,CompanyName,ContactName,ContactTitle,Address,City,Region,PostalCode,Country,Phone,Fax")] Customer customer)
         {
             // sample error to throw exception
